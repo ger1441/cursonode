@@ -3,13 +3,13 @@
 // const { promisify } = require('node:util');
 // const readFilePromise = promisify(fs.readFile);
 
-import { readFile } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises'
 
 Promise.all([
-    readFile('./archivo.txt', 'utf-8'),
-    readFile('./archivo2.txt', 'utf-8')
+  readFile('./archivo.txt', 'utf-8'),
+  readFile('./archivo2.txt', 'utf-8')
 ]).then(([text, text2]) => {
-    console.log('Leyendo archivos....');
-    console.log("Primer texto:" + text);
-    console.log("Segundo texto:" + text2);
-});
+  console.log('Leyendo archivos....')
+  console.log('Primer texto:' + text)
+  console.log('Segundo texto:' + text2)
+})
