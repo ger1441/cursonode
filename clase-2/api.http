@@ -1,0 +1,17 @@
+### Recuperar información de Ditto
+GET http://localhost:3000/pokemon/ditto
+
+### Recuperar información de Psyduck
+GET http://localhost:3000/pokemon/psyduck
+
+### Para crear un Pokemon
+POST http://localhost:3000/pokemon
+Content-Type: application/json
+
+{
+  "name": "Pikachu",
+  "type": "normal",
+  "moves": [
+    "transform"
+  ]
+}
