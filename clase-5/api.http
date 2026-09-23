@@ -1,0 +1,39 @@
+### Recuperar todas las películas
+GET http://localhost:3000/movies
+
+### Recuperar pelicula por id
+GET http://localhost:3000/movies/67deb658-b56c-11f1-818d-968fd6760d4
+
+### Recuperar peliculas por género
+GET http://localhost:3000/movies?genre=adventure
+
+### Crear una película con POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "sql": "SELECT * FROM users",
+    "title": "The Godfather",
+    "year": 1975,
+    "director": "Francis Ford Coppola",
+    "duration": 5,
+    "poster": "https://pics.filmaffinity.com/El_padrino-590289523-large.jpg",
+    "genre": [
+        "Crime",
+        "Drama"
+    ]
+}
+
+### Actualizar una pelicula
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "id" : 123,
+    "title": "buena peli",
+    "year": 1998
+}
+
+### Eliminar una pelicula
+DELETE http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
